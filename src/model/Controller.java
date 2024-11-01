@@ -113,16 +113,24 @@ public class Controller {
             game += "- "+players[i];
         }*/
 
-        Random select = new Random();
-        int opt = select.nextInt(6);
-        int opt2 = select.nextInt(6);
-        int ref = select.nextInt(4);
-        
-        while (opt==opt2){
-            opt2=select.nextInt(6);
+        for(int j=0;j<5;j++){
+            Random select = new Random();
+            int opt = select.nextInt(6);
+            int opt2 = select.nextInt(6);
+            int ref = select.nextInt(4);
+            
+            while (opt==opt2){
+                opt2=select.nextInt(6);
+            }
+            game+="Jugador "+opt+jugadores[x].pasarla()+"a Jugador "+opt2;
+            game += "\n";
+            game+="Arbitro "+ref+ " se desplaza sobre el hielo";
+            game += "\n";
+            if(j==4){
+                game+="Jugador "+opt2+" mete un gol!";
+            }
         }
-        game+="Jugador "+opt+jugadores[x].pasarla()+"a Jugador "+opt2;
-        game+=arbitros[ref].desplazarse();
+        
         return game;
     }
 
