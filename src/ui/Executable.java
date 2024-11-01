@@ -47,13 +47,15 @@ public class Executable {
 
 			switch (option) {
 					case 1:
-
+                        System.out.println(controladora.fixture());
 						break;
 					case 2:
-
+                        controladora.preloadTeams();
+                        controladora.preloadPlayers();
+                        controladora.preloadRefs();
 						break;
 					case 3:
-
+                        System.out.println(controladora.playGame());
 						break;
 					case 4:
 						flag = true;
