@@ -117,6 +117,7 @@ public class Controller {
         int opt = select.nextInt(6);
         int opt2 = select.nextInt(6);
         int ref = select.nextInt(4);
+        
         while (opt==opt2){
             opt2=select.nextInt(6);
         }
